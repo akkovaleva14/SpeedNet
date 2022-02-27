@@ -4,11 +4,25 @@
     <string name="history">History</string>
     <string name="settings">Settings</string>
 
-    <string name="type">Type</string>
-    <string name="date">Date</string>
-    <string name="download_speed">Download speed</string>
-    <string name="upload_speed">Upload speed</string>
-    <string name="ping">Ping</string>
+    <string name="type">\n Type </string>
+    <string name="date">\n Date </string>
+    <string name="download_speed"> Download \n speed</string>
+    <string name="upload_speed"> Upload \n speed</string>
+    <string name="ping">\n Ping </string>
 
+    <string name="type_info">Type Info</string>
+    <string name="date_info">Date Info</string>
+    <string name="download_speed_info">Download speed Info</string>
+    <string name="upload_speed_info">Upload speed Info</string>
+    <string name="ping_info">Ping Info</string>
+
+    <string name="button_start">START</string>
+
+    <string name="basic_left">25 Mbps</string>
+    <string name="basic_right">Basic Internet speed</string>
+    <string name="average_left">100 Mbps</string>
+    <string name="average_right">Average Internet speed</string>
+    <string name="fast_left">200 Mbps</string>
+    <string name="fast_right">Fast Internet speed</string>
 
 </resources>

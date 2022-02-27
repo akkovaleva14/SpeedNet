@@ -5,85 +5,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     android:orientation="vertical"
     tools:context=".MainPageFragment">
 
-
     <Button
+        android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="300dp" />
+        android:layout_marginTop="200dp"
+        android:text="@string/button_start" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp">
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:drawable/editbox_background"
+        android:padding="8dp">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/basic_left"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintEnd_toStartOf="@id/textView9"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/basic_left"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/basic_right"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/basic_right"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/basic_right"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@id/textView8"
+            app:layout_constraintStart_toEndOf="@id/basic_left"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="394dp" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/average_left"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintEnd_toStartOf="@id/textView4"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/average_left"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/average_right"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView8" />
+            app:layout_constraintTop_toBottomOf="@id/basic_left" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/average_right"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/average_right"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@id/textView3"
-            app:layout_constraintTop_toBottomOf="@id/textView9"
+            app:layout_constraintStart_toEndOf="@id/average_left"
+            app:layout_constraintTop_toBottomOf="@id/basic_right"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="394dp" />
 
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/fast_left"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintEnd_toStartOf="@id/textView6"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/fast_left"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/fast_right"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView3" />
+            app:layout_constraintTop_toBottomOf="@id/average_left" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/fast_right"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/fast_right"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@id/textView5"
-            app:layout_constraintTop_toBottomOf="@id/textView4"
+            app:layout_constraintStart_toEndOf="@id/fast_left"
+            app:layout_constraintTop_toBottomOf="@id/average_right"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="394dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
