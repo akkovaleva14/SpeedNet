@@ -1,14 +1,15 @@
 package com.hfad.speednet
 
+import android.content.Context
+import android.net.ConnectivityManager
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.hfad.speednet.R
+import com.hfad.speednet.CheckConnection.Companion.isOnline
 import com.hfad.speednet.databinding.FragmentMainPageBinding
 
 class MainPageFragment : Fragment() {
@@ -23,14 +24,37 @@ class MainPageFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
 
         _binding = FragmentMainPageBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
     }
+
+    override fun onResume() {
+        super.onResume()
+        binding.buttonStart.setOnClickListener {
+            checkSpeedConnection()
+        }
+    }
+
+    fun checkSpeedConnection() {
+        val checkConnection = context?.let { ctx -> isOnline(ctx) }
+        Log.i("sasha", "onResume: $checkConnection")
+        val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+        if (checkConnection != "NoConnection" && cm != null) {
+            val nc =
+                cm.getNetworkCapabilities(cm.activeNetwork)
+            val downSpeed = nc?.linkDownstreamBandwidthKbps?.toDouble()?.div(1000)
+            val upSpeed = nc?.linkUpstreamBandwidthKbps?.toDouble()?.div(1000)
+            binding.downloadInfo.text = downSpeed.toString()
+            binding.uploadInfo.text = upSpeed.toString()
+        } else {
+            Toast.makeText(context, "no connection, sorry", Toast.LENGTH_LONG).show()
+        }
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
