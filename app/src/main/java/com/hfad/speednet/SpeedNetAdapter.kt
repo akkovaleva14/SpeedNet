@@ -7,7 +7,7 @@ import com.hfad.speednet.databinding.SpeedNetInfoItemBinding
 
 class SpeedNetAdapter : RecyclerView.Adapter<SpeedNetAdapter.SpeedNetHolder>() {
 
-    var data = listOf<String>()
+    var data = listOf<Infos?>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -35,12 +35,12 @@ class SpeedNetAdapter : RecyclerView.Adapter<SpeedNetAdapter.SpeedNetHolder>() {
             }
         }
 
-        fun bind(str: String) {
-            binding.typeInfo.text = "LTE"
-            binding.dateInfo.text = "26/02/2020 \n12:55"
-            binding.downloadSpeedInfo.text = "42.88"
-            binding.uploadSpeedInfo.text = "35.09"
-            binding.pingInfo.text = "60"
+        fun bind(infos: Infos?) {
+            binding.typeInfo.text = infos?.typeInfo
+            binding.dateInfo.text = infos?.dateInfo
+            binding.downloadSpeedInfo.text = infos?.download_speedInfo
+            binding.uploadSpeedInfo.text = infos?.upload_speedInfo
+            binding.pingInfo.text = infos?.pingInfo
         }
     }
 }
