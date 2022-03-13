@@ -9,7 +9,7 @@ class Infos {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
 
-    var typeInfo: String? = null
+    var typeInfo: Int? = null
         get() = field
         set(value) {
             field = value
@@ -38,5 +38,4 @@ class Infos {
         set(value) {
             field = value
         }
-
 }

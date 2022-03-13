@@ -20,15 +20,13 @@
             android:orientation="horizontal">
 
 
-            <TextView
+            <ImageView
                 android:id="@+id/type_info"
                 android:layout_width="68dp"
                 android:layout_height="56dp"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:padding="4dp"
-                android:textSize="12sp"
-                tools:text="@string/type_info" />
+                android:padding="12dp"
+                android:src="@drawable/ic_baseline_settings_24"/>
 
             <TextView
                 android:id="@+id/date_info"

@@ -2,7 +2,7 @@
     <string name="app_name">SpeedNet</string>
     <string name="main_page">Main page</string>
     <string name="history">History</string>
-    <string name="settings">Settings</string>
+    <string name="other_info">Other info</string>
 
     <string name="type">\n Type </string>
     <string name="date">\n Date </string>
@@ -24,5 +24,18 @@
     <string name="average_right">Average Internet speed</string>
     <string name="fast_left">200 Mbps</string>
     <string name="fast_right">Fast Internet speed</string>
+
+    <string name="net_part">What does SpeedNet do?</string>
+    <string name="download_part">What is Download speed?</string>
+    <string name="upload_part">What is Upload speed?</string>
+    <string name="ping_part">What is Ping?</string>
+
+    <string name="net_part_text">The SpeedNet measures your current internet speed to the server closest to you. First and foremost, it checks if you are connected to the Internet at all. Then it points out your type of connection, WiFi or mobile/cellular, etc.</string>
+    <string name="download_part_text">Download speed is the speed with which you receive data from the internet. </string>
+    <string name="upload_part_text">Upload speed is the speed with which you send data to the internet. It is important to know for those who regularly use cloud services to store files.</string>
+    <string name="ping_part_text">Ping is response time between your computer and the internet. Pings refer to the response delay, which is particularly interesting to gamers. Here, lower values are preferable. 
+</string>
+
+
 
 </resources>

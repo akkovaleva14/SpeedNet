@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_main_page">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_main_page"
         android:name="com.hfad.speednet.MainPageFragment"
         android:label="@string/main_page"
         tools:layout="@layout/fragment_main_page" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_history"
         android:name="com.hfad.speednet.HistoryFragment"
         android:label="@string/history"
         tools:layout="@layout/fragment_history" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.hfad.speednet.SettingsFragment"
-        android:label="@string/settings"
-        tools:layout="@layout/fragment_settings" />
+        android:id="@+id/navigation_other_info"
+        android:name="com.hfad.speednet.OtherInfoFragment"
+        android:label="@string/other_info"
+        tools:layout="@layout/fragment_other_info" />
 </navigation>

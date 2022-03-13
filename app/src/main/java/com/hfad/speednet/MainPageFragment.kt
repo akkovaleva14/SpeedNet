@@ -55,7 +55,8 @@ class MainPageFragment : Fragment() {
     private fun pullDataBase() {
         speedNetDimension.dateInfo = getDateAndTime()
         speedNetDimension.pingInfo = ping().toString()
-        speedNetDimension.typeInfo = if (checkConnection == "Wifi") "Wifi" else "Mob"
+        speedNetDimension.typeInfo =
+            if (checkConnection == "Wifi") R.drawable.ic_baseline_wifi_24 else R.drawable.ic_baseline_settings_cell_24
         speedNetDimension.download_speedInfo = downSpeed.toString()
         speedNetDimension.upload_speedInfo = upSpeed.toString()
         if (downSpeed != null && upSpeed != null) {

@@ -3,6 +3,7 @@ package com.hfad.speednet
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.hfad.speednet.databinding.SpeedNetInfoItemBinding
 
 class SpeedNetAdapter : RecyclerView.Adapter<SpeedNetAdapter.SpeedNetHolder>() {
@@ -36,7 +37,11 @@ class SpeedNetAdapter : RecyclerView.Adapter<SpeedNetAdapter.SpeedNetHolder>() {
         }
 
         fun bind(infos: Infos?) {
-            binding.typeInfo.text = infos?.typeInfo
+            Glide
+                .with(binding.typeInfo)
+                .load(infos?.typeInfo)
+                .into(binding.typeInfo)
+
             binding.dateInfo.text = infos?.dateInfo
             binding.downloadSpeedInfo.text = infos?.download_speedInfo
             binding.uploadSpeedInfo.text = infos?.upload_speedInfo

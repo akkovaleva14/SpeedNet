@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hfad.speednet.databinding.FragmentHistoryBinding
 
-
 class HistoryFragment : Fragment() {
 
     private var _binding: FragmentHistoryBinding? = null
